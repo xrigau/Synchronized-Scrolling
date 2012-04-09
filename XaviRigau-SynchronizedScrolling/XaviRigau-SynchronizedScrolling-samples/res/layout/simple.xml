@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:xrigau="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <com.xrigau.syncscrolling.view.EnhancedScrollView
+        android:fadingEdge="none"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+        <com.xrigau.syncscrolling.view.SynchronizedScrollLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            xrigau:placeholderView="@+id/base_view"
+            xrigau:synchronizedView="@+id/synchronized_view" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="100dip"
+                    android:background="#00ff00" />
+
+                <View
+                    android:id="@+id/base_view"
+                    android:layout_width="fill_parent"
+                    android:layout_height="0dp" />
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1000dip"
+                    android:background="#00ff00" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/synchronized_view"
+                android:layout_width="fill_parent"
+                android:layout_height="100dip"
+                android:background="#ff0000" />
+        </com.xrigau.syncscrolling.view.SynchronizedScrollLayout>
+    </com.xrigau.syncscrolling.view.EnhancedScrollView>
+
+</LinearLayout>

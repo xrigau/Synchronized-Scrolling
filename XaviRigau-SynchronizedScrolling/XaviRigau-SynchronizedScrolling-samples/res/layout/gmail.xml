@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:xrigau="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <com.xrigau.syncscrolling.view.EnhancedScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:fadingEdge="none" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <com.xrigau.syncscrolling.view.SynchronizedScrollLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                xrigau:placeholderView="@+id/base_view"
+                xrigau:synchronizedView="@+id/synchronized_view" >
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#fff"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="15dip"
+                        android:textColor="#000"
+                        android:textStyle="bold"
+                        android:text="@string/email_subject" />
+
+                    <View
+                        android:id="@+id/base_view"
+                        android:layout_width="fill_parent"
+                        android:layout_height="0dp" />
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="10dip"
+                        android:textColor="#000"
+                        android:text="@string/lorem_ipsum" />
+                </LinearLayout>
+
+                <include
+                    android:id="@+id/synchronized_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    layout="@layout/gmail_synchronized_view_include" />
+            </com.xrigau.syncscrolling.view.SynchronizedScrollLayout>
+            
+            <com.xrigau.syncscrolling.view.SynchronizedScrollLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                xrigau:placeholderView="@+id/base_view"
+                xrigau:synchronizedView="@+id/synchronized_view" >
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#fff"
+                    android:orientation="vertical" >
+
+                    <View
+                        android:id="@+id/base_view"
+                        android:layout_width="fill_parent"
+                        android:layout_height="0dp" />
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="10dip"
+                        android:textColor="#000"
+                        android:text="@string/lorem_ipsum" />
+                </LinearLayout>
+
+                <include
+                    android:id="@+id/synchronized_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    layout="@layout/gmail_synchronized_view_include" />
+            </com.xrigau.syncscrolling.view.SynchronizedScrollLayout>
+            
+            <com.xrigau.syncscrolling.view.SynchronizedScrollLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                xrigau:placeholderView="@+id/base_view"
+                xrigau:synchronizedView="@+id/synchronized_view" >
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#fff"
+                    android:orientation="vertical" >
+
+                    <View
+                        android:id="@+id/base_view"
+                        android:layout_width="fill_parent"
+                        android:layout_height="0dp" />
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="10dip"
+                        android:textColor="#000"
+                        android:text="@string/lorem_ipsum" />
+                </LinearLayout>
+
+                <include
+                    android:id="@+id/synchronized_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    layout="@layout/gmail_synchronized_view_include" />
+            </com.xrigau.syncscrolling.view.SynchronizedScrollLayout>
+        </LinearLayout>
+    </com.xrigau.syncscrolling.view.EnhancedScrollView>
+
+</LinearLayout>
