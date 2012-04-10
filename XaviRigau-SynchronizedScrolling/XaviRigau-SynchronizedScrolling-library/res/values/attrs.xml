@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <declare-styleable name="SynchronizedScrollLayout">
+    <declare-styleable name="SynchronizedLinearLayout">
         <attr name="synchronizedView" format="reference" />
         <attr name="placeholderView" format="reference" />
         <attr name="syncView_gravity">
@@ -8,5 +8,10 @@
             <enum name="center_horizontal" value="1" />
             <enum name="right" value="2" />
         </attr>
+    </declare-styleable>
+    <declare-styleable name="SynchronizedRelativeLayout">
+        <attr name="synchronizedView" />
+        <attr name="placeholderView" />
+        <attr name="syncView_gravity" />
     </declare-styleable>
 </resources>

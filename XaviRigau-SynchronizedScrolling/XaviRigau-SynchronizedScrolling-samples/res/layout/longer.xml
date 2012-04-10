@@ -10,57 +10,54 @@
         android:layout_height="wrap_content"
         android:fadingEdge="none" >
 
-        <com.xrigau.syncscrolling.view.SynchronizedScrollLayout
+        <com.xrigau.syncscrolling.view.SynchronizedRelativeLayout
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
+            android:background="#fff"
             xrigau:placeholderView="@+id/base_view"
             xrigau:synchronizedView="@+id/synchronized_view" >
 
             <LinearLayout
+                android:id="@+id/top"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:background="#fff"
-                android:orientation="vertical" >
+                android:gravity="center"
+                android:orientation="vertical"
+                android:paddingBottom="10dip" >
 
-                <LinearLayout
-                    android:layout_width="fill_parent"
+                <ImageView
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:orientation="vertical"
-                    android:paddingBottom="10dip" >
-
-                    <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:src="@drawable/ic_launcher" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/lorem_ipsum" />
-                </LinearLayout>
-
-                <View
-                    android:id="@+id/base_view"
-                    android:layout_width="fill_parent"
-                    android:layout_height="0dp" />
+                    android:src="@drawable/ic_launcher" />
 
                 <TextView
-                    android:layout_width="fill_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/lorem_ipsum"
-                    android:paddingTop="10dip" />
+                    android:text="@string/lorem_ipsum" />
             </LinearLayout>
+
+            <View
+                android:id="@+id/base_view"
+                android:layout_width="fill_parent"
+                android:layout_height="0dp"
+                android:layout_below="@+id/top" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/base_view"
+                android:paddingTop="10dip"
+                android:text="@string/lorem_ipsum" />
 
             <LinearLayout
                 android:id="@+id/synchronized_view"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
+                android:background="#88232323"
                 android:gravity="center"
                 android:orientation="horizontal"
-                android:background="#88232323"
-                android:paddingTop="10dip"
-                android:paddingBottom="10dip" >
+                android:paddingBottom="10dip"
+                android:paddingTop="10dip" >
 
                 <ImageView
                     android:layout_width="wrap_content"
@@ -76,7 +73,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content" />
             </LinearLayout>
-        </com.xrigau.syncscrolling.view.SynchronizedScrollLayout>
+        </com.xrigau.syncscrolling.view.SynchronizedRelativeLayout>
     </com.xrigau.syncscrolling.view.EnhancedScrollView>
 
 </LinearLayout>

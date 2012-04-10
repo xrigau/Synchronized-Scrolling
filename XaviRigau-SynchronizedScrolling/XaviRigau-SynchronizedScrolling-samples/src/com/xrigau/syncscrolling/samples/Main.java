@@ -1,7 +1,5 @@
 package com.xrigau.syncscrolling.samples;
 
-import com.xrigau.syncscrolling.samples.R;
-
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;

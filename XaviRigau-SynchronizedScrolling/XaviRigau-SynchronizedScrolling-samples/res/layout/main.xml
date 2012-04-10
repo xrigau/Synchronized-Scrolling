@@ -15,47 +15,53 @@
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_margin="20dip"
+            android:gravity="center"
             android:text="@string/title"
-            android:textStyle="bold"
             android:textColor="#000"
             android:textSize="20sp"
-            android:gravity="center" />
+            android:textStyle="bold" />
 
         <Button
             android:id="@+id/simple"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:text="@string/simple" />
+            android:text="@string/simple"
+            android:textColor="#000" />
 
         <Button
             android:id="@+id/complex"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:text="@string/complex" />
+            android:text="@string/complex"
+            android:textColor="#000" />
 
         <Button
             android:id="@+id/longer"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:text="@string/longer" />
+            android:text="@string/longer"
+            android:textColor="#000" />
 
         <Button
             android:id="@+id/two"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:text="@string/two" />
+            android:text="@string/two"
+            android:textColor="#000" />
 
         <Button
             android:id="@+id/gravity"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:text="@string/gravity" />
+            android:text="@string/gravity"
+            android:textColor="#000" />
 
         <Button
             android:id="@+id/gmail"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:text="@string/gmail" />
+            android:text="@string/gmail"
+            android:textColor="#000" />
     </LinearLayout>
 
 </ScrollView>
