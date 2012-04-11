@@ -95,6 +95,8 @@ public class SynchronizedRelativeLayout extends RelativeLayout implements OnScro
 	private int mPlaceholderViewId, mSynchronizedViewId;
 	private View mSynchronizedView, mPlaceholderView;
 	private int mGravity = Gravity.LEFT;
+	
+	private int mLastSyncViewPos = 0;
 
 	/**
 	 * <p>
@@ -238,6 +240,8 @@ public class SynchronizedRelativeLayout extends RelativeLayout implements OnScro
 		// TODO: Maybe adjust the left and right with the View padding?
 		mSynchronizedView.layout(left, top, left + mSynchronizedView.getMeasuredWidth(), top + mSynchronizedView.getMeasuredHeight());
 		mPlaceholderView.layout(left, top, left + mSynchronizedView.getMeasuredWidth(), top + mSynchronizedView.getMeasuredHeight());
+		
+		mLastSyncViewPos = getTop() + getHeight() - mSynchronizedView.getMeasuredHeight();
 	}
 
 	/**
@@ -245,13 +249,19 @@ public class SynchronizedRelativeLayout extends RelativeLayout implements OnScro
 	 */
 	@Override
 	public void onVerticalScrollChanged(int offsetY) {
-		// Offset relative to this layout.
-		offsetY -= getTop();
+		// Offset relative to this layout's top.
+		final int relativeOffsetY = offsetY - getTop();
 
-		if (offsetY >= mPlaceholderView.getTop()) {
+		if (relativeOffsetY >= mPlaceholderView.getTop()) {
+			// If scroll has reached the top of this view, we calculate another offset to move the sync view up.
+			int reverseOffsetY = 0;
+			if (offsetY > mLastSyncViewPos) {
+				reverseOffsetY = offsetY - mLastSyncViewPos;
+			}
+			
 			// Instead of repositioning the view, we adjust the top offset of it
 			// to improve performance.
-			mSynchronizedView.offsetTopAndBottom(offsetY - mSynchronizedView.getTop());
+			mSynchronizedView.offsetTopAndBottom(relativeOffsetY - mSynchronizedView.getTop() - reverseOffsetY);
 		} else {
 			// The offset should be 0, but it doesn't work, so this is the
 			// correct number.
