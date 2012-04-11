@@ -26,11 +26,10 @@ To use this library, follow this steps:
 
 * Then you should declare an EnhancedScrollView in your layout. It's equivalent to declaring a ScrollView:
 
-<com.xrigau.syncscrolling.view.EnhancedScrollView
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:fadingEdge="none" >
-
+        <com.xrigau.syncscrolling.view.EnhancedScrollView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:fadingEdge="none" >
 
 * An EnhancedScrollView can contain one or more SynchronizedRelativeLayouts (if you want to have more than one, you can put them inside a Layout, because as an ScrollView, an EnhancedScrollView can only host one direct child. You must put a SynchronizedRelativeLayout inside your EnhancedScrollView:
 
