@@ -5,7 +5,7 @@ Synchronized Scrolling Library is a library that allows you to have a Synchroniz
 
 You can see that effect here:
 
-![Example Image - Play Store App 1][1]		![Example Image - Play Sore App 2][2]
+![Example Image - Play Store App 1][1]	 - 	![Example Image - Play Sore App 2][2]
 
 
 Introduction
@@ -14,7 +14,7 @@ Introduction
 You can find more info on synchronized scrolling at [Kirill Grouchnikov's blog][3].
 This is an example of what you'll be able to create with this library:
 
-![Example 1 - Gmail style][4] ![Example 2 - Gmail style][5]![Example 3 - Gmail style][6]
+![Example Gmail style][4]
 
 
 Usage
@@ -149,6 +149,4 @@ License
  [1]: http://farm7.static.flickr.com/6002/5951568960_83645dd316.jpg
  [2]: http://farm7.static.flickr.com/6137/5951013387_4996df9339.jpg
  [3]: http://www.pushing-pixels.org/2011/07/18/android-tips-and-tricks-synchronized-scrolling.html
- [4]: http://xavirigau.com/public_img/gmail_style_1.png
- [5]: http://xavirigau.com/public_img/gmail_style_2.png
- [6]: http://xavirigau.com/public_img/gmail_style_3.png
+ [4]: http://xavirigau.com/public_img/github_intro_gmail_style_example.jpg
