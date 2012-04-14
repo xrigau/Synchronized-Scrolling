@@ -5,7 +5,7 @@ Synchronized Scrolling Library is a library that allows you to have a Synchroniz
 
 You can see that effect here:
 
-![Example Image - Play Store App 1][1]	 - 	![Example Image - Play Sore App 2][2]
+![Example Image - Play Store App 1][1] ![Example Image - Play Sore App 2][2]
 
 
 Introduction
@@ -15,6 +15,14 @@ You can find more info on synchronized scrolling at [Kirill Grouchnikov's blog][
 This is an example of what you'll be able to create with this library:
 
 ![Example Gmail style][4]
+
+
+Download demo
+-------------
+
+You can download the sample app from Google's Play Store [clicking here][5] or read the QR code below:
+
+![Download sample app from Google's Play Store][6]
 
 
 Usage
@@ -70,7 +78,6 @@ In this case we have 4 views, the @+id/top, will be on top, the @+id/base_view i
 
 * Putting all together. For the basic example you just need to add this to your main.xml layout:
 
-<?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:xrigau="http://schemas.android.com/apk/res-auto"
     android:layout_width="fill_parent"
@@ -149,3 +156,5 @@ License
  [2]: http://farm7.static.flickr.com/6137/5951013387_4996df9339.jpg
  [3]: http://www.pushing-pixels.org/2011/07/18/android-tips-and-tricks-synchronized-scrolling.html
  [4]: http://xavirigau.com/public_img/github_intro_gmail_style_example.jpg
+ [5]: https://play.google.com/store/apps/details?id=com.xrigau.syncscrolling.samples
+ [6]: http://xavirigau.com/public_img/qr-code-syncscroll-samples.png
