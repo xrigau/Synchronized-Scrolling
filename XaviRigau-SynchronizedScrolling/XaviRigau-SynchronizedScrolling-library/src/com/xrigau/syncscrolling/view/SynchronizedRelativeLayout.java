@@ -221,27 +221,29 @@ public class SynchronizedRelativeLayout extends RelativeLayout implements OnScro
 	 */
 	@Override
 	protected void onLayout(boolean changed, int l, int t, int r, int b) {
-		super.onLayout(changed, l, t, r, b);
-		int top = mPlaceholderView.getTop();
-		int left = mSynchronizedView.getLeft();
-
-		/*
-		 * Adjust the left position depending on the syncView_gravity attribute.
-		 */
-		switch (mGravity) {
-		case Gravity.CENTER_HORIZONTAL:
-			left = (getWidth() - mSynchronizedView.getMeasuredWidth()) / 2;
-			break;
-		case Gravity.RIGHT:
-			left = getWidth() - mSynchronizedView.getMeasuredWidth();
-			break;
+		if (changed) {
+			super.onLayout(changed, l, t, r, b);
+			int top = mPlaceholderView.getTop();
+			int left = mSynchronizedView.getLeft();
+	
+			/*
+			 * Adjust the left position depending on the syncView_gravity attribute.
+			 */
+			switch (mGravity) {
+			case Gravity.CENTER_HORIZONTAL:
+				left = (getWidth() - mSynchronizedView.getMeasuredWidth()) / 2;
+				break;
+			case Gravity.RIGHT:
+				left = getWidth() - mSynchronizedView.getMeasuredWidth();
+				break;
+			}
+	
+			// TODO: Maybe adjust the left and right with the View padding?
+			mSynchronizedView.layout(left, top, left + mSynchronizedView.getMeasuredWidth(), top + mSynchronizedView.getMeasuredHeight());
+			mPlaceholderView.layout(left, top, left + mSynchronizedView.getMeasuredWidth(), top + mSynchronizedView.getMeasuredHeight());
+			
+			mLastSyncViewPos = getTop() + getHeight() - mSynchronizedView.getMeasuredHeight();
 		}
-
-		// TODO: Maybe adjust the left and right with the View padding?
-		mSynchronizedView.layout(left, top, left + mSynchronizedView.getMeasuredWidth(), top + mSynchronizedView.getMeasuredHeight());
-		mPlaceholderView.layout(left, top, left + mSynchronizedView.getMeasuredWidth(), top + mSynchronizedView.getMeasuredHeight());
-		
-		mLastSyncViewPos = getTop() + getHeight() - mSynchronizedView.getMeasuredHeight();
 	}
 
 	/**
